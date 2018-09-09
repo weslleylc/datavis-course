@@ -12,5 +12,7 @@
 [index10.html](basic/index10.html)<br>
 
 ---
+## Exercicio d3
+[index01.html](d3_intro/movies_d3.html)<br>
 
 Para saber mais sobre a sintaxe markdown, veja [este guia](https://guides.github.com/features/mastering-markdown/).
