@@ -31,7 +31,7 @@
             .style("width", fun)
             .select("span")
                 .text(function (d) {
-                    return d.Film;
+                    return d.Film +"("+d.Worldwide_Gross_M+")";
                 });
          if(comparator)
             d3.select("body")
@@ -62,7 +62,7 @@
         return a.Worldwide_Gross_M > b.Worldwide_Gross_M?-1:1
     };
     let comparePorOrcamento = function (a, b) { 
-        return a.Budget_M < b.Budget_M?-1:1;
+        return a.Budget_M > b.Budget_M?-1:1;
     };
     let comparePorLucro = function (a, b) { 
         return (a.Worldwide_Gross_M-a.Budget_M) > (b.Worldwide_Gross_M-b.Budget_M)?-1:1;
@@ -90,17 +90,17 @@
     
     d3.json("data/movies.json").then(function(json){ 
         render(json, comparePorBilheteria,"1) Filmes com maior bilheteria","#chartOne","A",function (d) {
-                return d.Worldwide_Gross_M/1.5  + "px";
+                return d.Worldwide_Gross_M/3  + "px";
             });
     });
     d3.json("data/movies.json").then(function(json){ 
         render(json, comparePorOrcamento,"2) Filmes com menor Orçamento","#chartTwo","B",function (d) {
-                return d.Budget_M/1.5  + "px";
+                return d.Budget_M*2  + "px";
             });
     });
     d3.json("data/movies.json").then(function(json){ 
         render(json, comparePorLucro,"3) Filmes com maior Lucro","#chartThree","C",function (d) {
-                return (d.Worldwide_Gross_M-d.Budget_M)/1.5 + "px";
+                return (d.Worldwide_Gross_M-d.Budget_M)/2 + "px";
             });
     });
 
