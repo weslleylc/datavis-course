@@ -1,3 +1,9 @@
+## Aula do dia 12/09/2018
+[d3_intro/movies_scatterplot.html](d3_intro/movies_d3.html)<br>
+
+## Aula do dia 05/09/2018
+[index01.html](d3_intro/movies_d3.html)<br>
+
 ## Aula do dia 03/09/2018
 
 [index01.html](basic/index01.html)<br>
@@ -12,7 +18,5 @@
 [index10.html](basic/index10.html)<br>
 
 ---
-## Exercicio d3
-[index01.html](d3_intro/movies_d3.html)<br>
 
 Para saber mais sobre a sintaxe markdown, veja [este guia](https://guides.github.com/features/mastering-markdown/).
