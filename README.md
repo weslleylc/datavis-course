@@ -1,8 +1,8 @@
 ## Aula do dia 12/09/2018
-[d3_intro/movies_scatterplot.html](d3_intro/movies_d3.html)<br>
+[movies_scatter.html](d3_intro/movies_scatterplot.html)<br>
 
 ## Aula do dia 05/09/2018
-[index01.html](d3_intro/movies_d3.html)<br>
+[Movies.html](d3_intro/movies_d3.html)<br>
 
 ## Aula do dia 03/09/2018
 
