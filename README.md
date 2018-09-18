@@ -1,3 +1,6 @@
+## Aula do dia 17/09/2018
+[Animation_scatter.html](d3_intro/animation_scatterplot.html)<br>
+
 ## Aula do dia 12/09/2018
 [Movies_scatter.html](d3_intro/movies_scatterplot.html)<br>
 
