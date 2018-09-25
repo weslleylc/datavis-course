@@ -1,3 +1,8 @@
+
+## Aula do dia 24/09/2018
+[acoes.html](d3_crossfilter/acoes.html)<br>
+[movies_d3_dc.html](d3_crossfilter/movies_d3_dc.html)<br>
+
 ## Aula do dia 17/09/2018
 [Animation_scatter.html](d3_intro/animation_scatterplot.html)<br>
 

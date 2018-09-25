@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Valores das ações da Tesla e do Facebook</title>
+    <link rel="stylesheet" href="css/dc.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/crossfilter.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/dc.min.js"></script>
+
+</head>
+<body>
+     <div>
+        <div id="gross">        
+            <h1>Bilheteria ao longo dos anos.</h1>
+        </div>
+
+        <div id="genre">
+            <h1>Bilheteria alcançada por gênero.</h1>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let grossChart = dc.barChart('#gross');
+        let genreChart = dc.barChart('#genre');
+
+        d3.json("data/movies.json").then(function(json){
+            let data=json;
+
+            //criando um crossfilter
+            let facts = crossfilter(data);
+
+            let dateDim = facts.dimension(function(d){
+                return d.Year;
+            });
+
+            let genreDim = facts.dimension(function(d){
+                return d.Genre;
+            });
+
+            let grossByYearGroup = dateDim.group().reduceSum(function(d){
+                return d.Worldwide_Gross_M;
+            });
+
+            let grossByGenreGroup = genreDim.group().reduceSum(function(d){
+                return d.Worldwide_Gross_M;
+            });
+            
+            grossChart.width(800)
+                     .height(400)
+                     .margins({top: 50, right: 50, bottom: 40, left: 40})
+                     .dimension(dateDim)
+                     .x(d3.scaleBand())
+                     .xAxisLabel('Ano')
+                     .yAxisLabel('Bilheteria Total')
+                     .xUnits(dc.units.ordinal)
+                     .renderHorizontalGridLines(true)
+                     .barPadding(0.4)
+                     .brushOn(false)    
+                     .ordinalColors(['green'])
+                     .group(grossByYearGroup,  'Bilheteria');
+            
+            genreChart.width(800)
+                     .height(400)
+                     .margins({top: 50, right: 50, bottom: 40, left: 40})
+                     .dimension(dateDim)
+                     .x(d3.scaleBand())
+                     .xAxisLabel('Gênero')
+                     .yAxisLabel('Bilheteria Total')
+                     .xUnits(dc.units.ordinal)
+                     .renderHorizontalGridLines(true)
+                     .barPadding(0.4)
+                     .brushOn(false)    
+                     .ordinalColors(['blue'])
+                     .group(grossByGenreGroup,  'Bilheteria');
+            
+            dc.renderAll();
+            });
+    </script>           
+</body>
+</html>
+
+
