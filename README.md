@@ -1,3 +1,5 @@
+## Aula do dia 03/09/2018
+[chicago.html](d3_earthquakes/chicago.html)<br>
 
 ## Aula do dia 26/09/2018
 [earthquakes.html](d3_earthquakes/earthquakes.html)<br>

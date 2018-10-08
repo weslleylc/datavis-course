@@ -23,7 +23,7 @@ h2 span {
     position: relative;
 }
 
-#mapid {
+#mapid, #map-chart {
     width: 650px;
     height: 450px;
 }
