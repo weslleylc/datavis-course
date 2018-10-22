@@ -70,13 +70,16 @@
               .interpolate(d3.interpolateHcl)
             .range([d3.rgb("#007AFF"), d3.rgb('#FFF500')]);
 
+          var sizeScale = d3.scaleSqrt()
+                          .domain([1,36])
+                          .range([6,22]);
           // create simulation constant using the forceSimulation function defined down below
           const node = vis.append("g")
                         .selectAll("circle")
                         .data(nodes)
                         .enter()
                         .append("circle")
-                        .attr('r',d => countRays(links,d.id))
+                        .attr('r',d => sizeScale(countRays(links,d.id)))
                         .attr("fill", d => colorScale(d.group))   
                         .attr("class", "node")
                         .call(drag(simulation));
