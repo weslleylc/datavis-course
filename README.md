@@ -1,3 +1,7 @@
+## Aula do dia 124/09/2018
+[crimes.html](color-d3/crimes.html)<br>
+[usa.html](color-d3/usa.html)<br>
+
 ## Aula do dia 10/09/2018
 [lemiserables.html](d3_networks_trees/lemiserables.html)<br>
 [songs.html](d3_networks_trees/songs.html)<br>
