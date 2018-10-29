@@ -1,4 +1,4 @@
-## Aula do dia 124/09/2018
+## Aula do dia 24/09/2018
 [crimes.html](color-d3/crimes.html)<br>
 [usa.html](color-d3/usa.html)<br>
 
