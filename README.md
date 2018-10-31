@@ -1,12 +1,12 @@
-## Aula do dia 24/09/2018
+## Aula do dia 24/10/2018
 [crimes.html](color-d3/crimes.html)<br>
 [usa.html](color-d3/usa.html)<br>
 
-## Aula do dia 10/09/2018
+## Aula do dia 10/10/2018
 [lemiserables.html](d3_networks_trees/lemiserables.html)<br>
 [songs.html](d3_networks_trees/songs.html)<br>
 
-## Aula do dia 03/09/2018
+## Aula do dia 03/10/2018
 [chicago.html](d3_earthquakes/chicago.html)<br>
 
 ## Aula do dia 26/09/2018
