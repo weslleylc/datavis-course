@@ -1,3 +1,7 @@
+## Aula do dia 31/10/2018
+[earthquakes.html](color-d3/earthquakes.html)<br>
+[usa.html](color-d3/usa.html)<br>
+
 ## Aula do dia 24/10/2018
 [crimes.html](color-d3/crimes.html)<br>
 [usa.html](color-d3/usa.html)<br>
