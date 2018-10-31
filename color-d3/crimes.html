@@ -81,7 +81,7 @@
 	info.update = function (feat) {
             //console.log(feat);
 			this._div.innerHTML = '<h5>Número de homicídios</h5>' +  (feat ?
-				'<b>' + feat.properties.NOME + '</b><br />' + homicidiosByName.get(feat.properties.NOME) + ' homicídios'
+				'<b>' + feat.properties.NOME + '</b><br />' + homicidiosByName.get(feat.properties.NOME)*100 + '% homicídios'
 				: 'Passe o mouse sobre um bairro');
 	};
 
@@ -163,13 +163,20 @@
             n = blues.length,
 			from, to;
 		
-		let type=".3";	
+		let type=".2p";	
 		for (let i = 0; i < n; i++) {
 			let c = blues[i];
             let fromto = quantize.invertExtent(c);
-			labels.push(
+            if (i==0){
+            	labels.push(
+				'<i style="background:' + blues[i] + '"></i> ' +
+				"0.000" + (d3.format(type)(fromto[1]) ? '&ndash;' + d3.format(type)(fromto[1]) : '+'));
+            }else{
+            	labels.push(
 				'<i style="background:' + blues[i] + '"></i> ' +
 				d3.format(type)(fromto[0]) + (d3.format(type)(fromto[1]) ? '&ndash;' + d3.format(type)(fromto[1]) : '+'));
+            }
+			
 		}
 
 		div.innerHTML = labels.join('<br>');
